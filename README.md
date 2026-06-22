@@ -7,6 +7,8 @@
 
 This repository contains the deployment configurations, setups, and analytical resources for building an integrated, active-deception **Security Operations Center (SOC) Honeypot Pipeline**. By running **Cowrie** (a medium-interaction SSH/Telnet honeypot) on an endpoint VM, we capture malicious inputs, parse them via a localized **Wazuh Agent**, and index high-priority alerts inside a centralized **Wazuh SIEM Dashboard**.
 
+![Wazuh Threat Hunting Dashboard Overview](assets/wazuh_threat_hunting_dashboard.png)
+
 ---
 
 ## SOC pipeline Work Process Flow

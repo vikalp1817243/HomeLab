@@ -28,6 +28,10 @@ The following schema maps Cowrie log keys to their corresponding indexed fields 
 | `data.session` | `28bcc6aa8fdf` | A cryptographically unique hash pinning all actions to a single connection. |
 | `location` | `/var/log/cowrie/cowrie.json` | The file source validated by the Wazuh Agent tail daemon. |
 
+Here is a live example of an ingested security alert's telemetry schema shown in the Wazuh Document Details pane:
+
+![Wazuh Telemetry Log Details](../assets/wazuh_telemetry_document_details.png)
+
 ---
 
 ## SIEM Rule Matching Matrix
@@ -40,6 +44,10 @@ When raw logs are ingested on Host-A, the custom rules engine triggers alerts ba
 | **100101** | Level 5 (Notice) | `cowrie.login.failed` | Attacker failed a login attempt. |
 | **100102** | Level 7 (Warning) | `cowrie.login.success` | Attacker successfully logged into the fake sandbox. |
 | **100103** | Level 6 (Notice) | `cowrie.command.input` | Attacker typed a command inside the fake shell. |
+
+Below is an example of the events list showing these custom rules firing sequentially in the Wazuh manager:
+
+![SIEM Alerts List for Custom Rules](../assets/wazuh_discover_sequential_rules.png)
 
 ---
 

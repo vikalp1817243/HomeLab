@@ -161,6 +161,10 @@ wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.
 sudo WAZUH_MANAGER='<Host-A-IP>' WAZUH_AGENT_NAME='Honeypot-HostB' dpkg -i wazuh-agent_4.7.2-1_amd64.deb
 ```
 
+![Wazuh Agent Package Download and Setup Selection](../assets/wazuh_agent_deploy_package.png)
+
+![Wazuh Agent Deploy Instructions and Starting Options](../assets/wazuh_agent_deploy_commands.png)
+
 ### 2. Configure Agent Logging Matrix
 Add Cowrie's local JSON output as a monitored source inside the Wazuh agent configuration:
 ```bash
@@ -189,6 +193,12 @@ Verify the connection is online and green:
 ```bash
 sudo systemctl status wazuh-agent
 ```
+
+![Wazuh Agent Terminal Status and Service Restart](../assets/terminal_services_startup_restart.png)
+
+Verify that the agent registers correctly and appears as online (green status) in the Wazuh Manager dashboard:
+
+![Wazuh Agent Active Connection Details](../assets/wazuh_agent_connection_status.png)
 
 ---
 
